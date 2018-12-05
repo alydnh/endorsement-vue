@@ -1,6 +1,6 @@
 <template>
     <pt-layout :fixed-block-visible="false" vertical-mode style="background-size:cover;background-image:url(/static/images/module-account/background.jpg)">
-        <div class="flex-row account-main" slot="second">
+        <div class="flex-row main account-main" slot="second">
             <div class="flex-col wrapper">
                 <div class="flex-row logo">
                 </div>
@@ -18,9 +18,8 @@
 export default {};
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .account-main {
-    flex-grow: 1;
     justify-content: center;
     > .wrapper {
         flex: 0 0 80%;
@@ -44,5 +43,13 @@ export default {};
     background-color: grey;
     border-radius: 5px;
     opacity: 0.5;
+}
+
+.round-corner {
+    border-radius: 5px;
+}
+
+.bg-default {
+    background-color: white;
 }
 </style>

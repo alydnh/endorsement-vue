@@ -36,6 +36,11 @@ body,
     flex-direction: column;
 }
 
+.flex-row.main,
+.flex-col.main {
+    flex-grow: 1;
+}
+
 .flex-row,
 .flex-col {
     display: flex;
@@ -62,6 +67,14 @@ body,
 
     > .end-content {
         justify-content: flex-end;
+    }
+
+    > .space-between-content {
+        justify-content: space-between;
+    }
+
+    > .end-self {
+        align-self: flex-end;
     }
 }
 
@@ -111,6 +124,10 @@ body,
 }
 
 /*icon*/
+
+.fa.danger {
+    color: #f56c6c;
+}
 
 .fa.positive-darker {
     color: $ptit-positive-darker;
