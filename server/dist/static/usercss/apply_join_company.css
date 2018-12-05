@@ -1,0 +1,425 @@
+@charset "utf-8";
+
+body {
+	margin: 0 auto;
+	width: 1916px;
+	height: 1079px;
+}
+
+.header {
+	width: 1916px;
+	height: 67px;
+	/*border: 1px solid olive;*/
+	border-bottom: 2px solid lightgrey;
+	background-color: white;
+	position: relative;
+}
+.header_logo {
+	width: 248px;
+	height: 67px;
+	background-image: url(img/logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.header_right_icon {
+	width: 77px;
+	height: 67px;
+	background: url(img/QQ图片20170717143418_04.gif);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 99;
+	border-left: 2px solid lightgrey;
+}
+.user_icon {
+	width: 194px;
+	height: 67px;
+	background: url(img/QQ图片20170717143418_03.gif);
+	position: absolute;
+	top: 0px;
+	right: 77px;
+	border-left: 2px solid lightgrey;
+}
+.header_tips {
+	width: 115px;
+	height: 67px;
+	background: url(img/QQ图片20170717143418_02.gif);
+	background-position: center;
+	position: absolute;
+	top: 0px;
+	right: 285px;
+	border-left: 2px solid lightgrey;
+}
+
+.aside {
+	width: 246px;
+	height: 1012px;
+	background-color: #fbfbfb;
+	float: left;
+	box-shadow: 0 10px 10px 0.6;
+	border-right: 2px solid lightgrey;
+	position: relative;
+
+}
+
+.user_info {
+	width: 1668px;
+	height: 69px;
+	background-color: #fbfbfb;
+	border-bottom: 2px solid lightgrey;
+	float: left;
+	position: relative;
+}
+.user_info_text {
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	letter-spacing: 3px;
+}
+
+/*.user_info button {
+	width: 150px;
+	height: 40px;
+	position: absolute;
+	top: 14px;
+	left: 1490px;
+	background-color: orange;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	border: none;
+	box-shadow: 0 3px 5px  rgba(247,177,30,0.6)
+}*/
+	
+.body {
+	float: left;
+	width: 1668px;
+	height: 943px;
+	background-color: #f3f7fb;
+	position: relative;
+}
+.white_board {
+	width: 870px;
+	height: 534px;
+	background-color: white;
+	border-radius: 4px;
+	box-shadow: 0 0px 25px rgba(10,10,10,0.3);
+	position: absolute;
+	top: 130px;
+	left: 400px;
+	z-index: 9999;
+}
+.white_board_text {
+	position: absolute;
+	top: 27px;
+	left: 335px;
+}
+.iconX {
+	width: 27px;
+	height: 27px;
+	background-image: url(img/iconX.png);
+	position: absolute;
+	top: 35px;
+	left: 805px;
+}
+.white_board_hr {
+	position: absolute;
+	top: 90px;
+	left: 35px;
+}
+.invite_code {
+	position: absolute;
+	top: 160px;
+	left: 235px;
+}
+.invite_code input {
+	width: 390px;
+	height: 50px;
+	border: 1px solid lightgrey;
+	border-radius: 3px;
+	outline: none;
+	font-size: 16px;
+	color: grey;
+	cursor: pointer;
+}
+.next_step {
+	position: absolute;
+	top: 160px;
+	left: 548px;
+	width: 80px;
+	height: 54px;
+	background-color: orange;
+	border-radius: 3px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	border: none;
+	box-shadow: 0 2px 10px  rgba(247,177,30,0.5);
+}
+.company_board_top {
+	width: 390px;
+	height: 88px;
+	background-color: white;
+	border: 1px solid #1a84fa;
+	/*border-radius: 2px;*/
+	position: absolute;
+	top: 250px;
+	left: 235px;
+}
+.white_board_zhenyi_logo {
+	width: 65px;
+	height: 65px;
+	background-image: url(img/zhenyilogo.png);
+	position: absolute;
+	top: 11px;
+	left: 5px;
+}
+.zhengyi_text2 {
+	width: 500px;
+	height: 200px;
+	position: absolute;
+	top: 25px;
+	left: 74px;
+	text-align: left;
+	letter-spacing: 1px;
+}
+
+
+
+.apply_join {
+	position: absolute;
+	top: 430px;
+	left: 235px;
+	width: 390px;
+	height: 50px;
+	background-color: orange;
+	border-radius: 3px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	border: none;
+	box-shadow: 0 3px 5px  rgba(247,177,30,0.6);
+}
+
+.grey_mask {
+	float: left;
+	width: 1668px;
+	height: 943px;
+	background-color: grey;
+	opacity: 0.5;
+	position: absolute;
+	top: -2px;
+	left: -1px;
+	z-index: 9998;
+}
+.search {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+.search input {
+	height: 40px;
+	width: 230px;
+	border-radius: 2px;
+	border: 1px solid #e3e3e3;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 4px;
+	text-align: left;
+	font-size: 12px;
+	color: grey;
+}
+.search_icon {
+	width: 25px;
+	height: 25px;
+	background-image: url(img/search.png);
+	position: absolute;
+	top: 23px;
+	left: 212px;
+}
+.company_board_1 {
+	width: 400px;
+	height: 450px;
+	background-color: white;
+	border: 1px solid lightgrey;
+	border-radius: 2px;
+	position: absolute;
+	top: 75px;
+	left: 15px;
+}
+.zhenyi_logo {
+	width: 65px;
+	height: 65px;
+	background-image: url(img/zhenyilogo.png);
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	z-index: 99;
+}
+.zhengyi_text {
+	width: 500px;
+	height: 200px;
+	position: absolute;
+	top: 30px;
+	left: 115px;
+	text-align: left;
+	letter-spacing: 1px;
+}
+.company_info_table {
+	width: 310px;
+	height: 215px;
+	position: absolute;
+	top: 130px;
+	left: 40px;
+	border-top: 1px solid lightgrey;
+	border-bottom: 1px solid lightgrey;
+}
+.company_info_table table {
+	width: 420px;
+	height: 200px;
+	border-collapse: collapse;
+	font-size: 13px;
+}
+.resign_application {
+	position: absolute;
+	top: 245px;
+	left: 0px;
+	width: 100px;
+	height: 35px;
+	border-radius: 3px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	border: 1px solid orange;
+	background: none;
+	color: orange;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+.company_board_2 {
+	width: 400px;
+	height: 450px;
+	background-color: #f3f7fb;
+	border: 1px solid lightgrey;
+	border-radius: 2px;
+	position: absolute;
+	top: 75px;
+	left: 500px;
+}
+
+.company_board_3 {
+	width: 400px;
+	height: 450px;
+	background-color: #f3f7fb;
+	border: 1px solid lightgrey;
+	border-radius: 2px;
+	position: absolute;
+	top: 75px;
+	left: 920px;
+}
+.resign_application2 {
+	position: absolute;
+	top: 245px;
+	left: 0px;
+	width: 100px;
+	height: 35px;
+	border-radius: 3px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	border: 1px solid orange;
+	background: white;
+	color: orange;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.resign_application3 {
+	position: absolute;
+	top: 245px;
+	left: 0px;
+	width: 100px;
+	height: 35px;
+	border-radius: 3px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	border: 1px solid lightgrey;
+	background: none;
+	color: lightgrey;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.bottom_num_select {
+	position: absolute;
+	top: 670px;
+	left: 140px;
+}
+.bottom_num_select select {
+	width: 100px;
+	height: 25px;
+	text-align: center;
+	position: absolute;
+	color: grey;
+	font-size: 15px;
+	letter-spacing: 2px;
+}
+.bottom_num {
+	position: absolute;
+	top: 675px;
+	left: 320px;
+	width: 300px;
+	height: 50px;
+	z-index: 99;
+}
+.bottom_num table {
+	width: 300px;
+	height: 12px;	
+}
+.left_num_button1 {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 673px;
+	left: 255px;
+}
+.left_num_button2 {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 673px;
+	left: 285px;
+}
+.left_num_button3 {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 673px;
+	left: 609px;
+}
+.left_num_button4 {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 673px;
+	left: 639px;
+}
+.bottom_blue_square {
+	width: 25px;
+	height: 25px;
+	background-color: #437bda;
+	border-radius: 3px;
+	position: absolute;
+	top: 671px;
+	left: 313px;
+}
+.bottom_grey_square {
+	width: 25px;
+	height: 25px;
+	background-color: lightgrey;
+	border-radius: 3px;
+	position: absolute;
+	top: 671px;
+	left: 579px;
+}

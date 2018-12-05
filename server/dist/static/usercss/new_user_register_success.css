@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+@import url("base_layout.css");
+@import url("default_layout.css");
+@import url("default_img.css");
+@import url("default_icon.css");
+@import url("base_style.css");
+@import url("default_style.css");
+@import url("user_layout.css");
+
+.body{background-size: 110%;}
+.register{right: 14%; width:32%; height: 110%; index-z:2;}
+.login{width:50%;}
+.iconok{left:3%; top:10%; width:17%; height: 12%; background-size: 95%;}
+.titleok{left:25%; top:9%;}
+.infook{left:25%; top:22%; width:65%; word-break: break-all;}
+.listok{left:10%; top:40%;width:80%;}
+.next_button {top: 80%; height: 7%}

@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+
+/*基本框颜色*/
+.lightgrey{color: lightgrey;}
+
+/*基本框*/
+.box-fy{overflow-y: auto;}
+.box-r{border-radius: 5px; opacity: 1;}
+.box-ra{border-radius: 5px; opacity: 0.5;}
+.box-grey-ra{background-color: grey;border-radius: 5px; opacity: 0.5;}
+.box-black-r{background-color: black;border-radius: 5px; opacity: 0.9;}
+.box-green-r{background-color: #54b8ea;border-radius: 5px; opacity: 0.9;}
+.box-white-r{background-color: white;border-radius: 5px; opacity: 1;}
+.box-white-b1{background-color: white;border: 1px solid grey; opacity: 1;}
+.box-white-rs{background-color: white;border-radius: 5px; opacity: 1;box-shadow: 0 3px 8px rgba(0,0,0,0.5);}
+
+.box-white{background-color: white;border: 0px solid grey; opacity: 1;}
+.box-greygreen{background-color: #f2f6f9;border: 0px solid grey; opacity: 1;}
+
+.box-AliceBlue-b1{background-color: #f3f7fb; border: 1px solid grey; opacity: 1;}
+
+/*基本标题*/
+
+/*对话框*/
+.dailog-white-r{position: fixed; right: 25%;top: 25%; height:50%; width: 50%; 
+								min-width: 500px;min-height: 250px; z-index: 10;
+								box-shadow: 0 0px 25px rgba(10,10,10,0.3);
+								background-color: white;border-radius: 5px;border: 1px solid #dcdcdc; opacity: 1;}
+.dailog-white-r div.close{position: absolute; right: 3%;top: 3%; }
+.dailog-white-r div.title{position: absolute; font-size:170%; color: grey; left: 5%;top: 3%; height:10%; width: 90%; text-align: center;}
+.dailog-white-r div.title:before {position: absolute; display: block; content: '';width: calc(100% - 0px);height: 0px;border: 1px solid #dcdcdc; top: 110%;}
+

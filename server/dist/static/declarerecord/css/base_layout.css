@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+/*全局布局*/
+body {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+/*水平布局*/
+.h-left30 {position: absolute; width: 30%; left: 0%;}
+.h-center20 {position: absolute; width: 20%; left: 40%;}
+.h-center30 {position: absolute; width: 30%; left: 35%;}
+.h-center50 {position: absolute; width: 50%; left: 25%;}
+.h-center68 {position: absolute; width: 68%; left: 16%;}
+.h-center76 {position: absolute; width: 76%; left: 12%;}
+.h-center80 {position: absolute; width: 80%; left: 10%;}
+.h-center90 {position: absolute; width: 90%; left: 5%;}
+.h-right50 {position: absolute; width: 50%; right: 0%;}
+.h-right70 {position: absolute; width: 70%; right: 0%;}
+
+/*垂直布局*/
+.v-top10 {position: absolute; height: 10%; top: 0%;}
+.v-top20 {position: absolute; height: 20%; top: 0%;}
+.v-middle64 {position: absolute; height: 64%; top: 18%;}
+.v-middle70 {position: absolute; height: 70%; top: 15%;}
+.v-bottom8 {position: absolute; height: 8%; bottom: 0%;}
+.v-bottom10 {position: absolute; height: 10%; bottom: 0%;}
+
+/*元素定位-8个方向*/
+/*左*/
+.p-l {position: absolute; left: 0%;}
+.p-l1 {position: absolute; left: 1%;}
+
+/*右*/
+.p-r {position: absolute; right: 0%;}
+.p-r1 {position: absolute; right: 1%;}
+
+/*上*/
+.p-t {position: absolute; top: 0%;}
+.p-t1 {position: absolute; top: 1%;}
+
+/*下*/
+.p-b {position: absolute; bottom: 0%;}
+.p-b1 {position: absolute; bottom: 1%;}
+
+/*左上*/
+.p-lt {position: absolute; left: 0%; top: 0%;}
+.p-lt1 {position: absolute; left: 1%; top: 1%;}
+.p-l1t5 {position: absolute; left: 1%; top: 5%;}
+.# {position: absolute; left: 1%; top: 15%;}
+.p-l5t10 {position: absolute; left: 5%; top: 10%;}
+
+/*左下*/
+.p-lb {position: absolute; left: 0%; bottom: 0%;}
+.p-lb1 {position: absolute; left: 1%; bottom: 1%;}
+.p-l1b15 {position: absolute; left: 1%; bottom: 15%;}
+.p-l10b15 {position: absolute; left: 10%; bottom: 15%;}
+
+/*右上*/
+.p-rt {position: absolute; right: 0%; top: 0%;}
+.p-rt1 {position: absolute; right: 1%; top: 1%;}
+.p-r2t2 {position: absolute; right: 2%; top: 1.7%;}
+.p-r1t31 {position: absolute; right: 1%; top: 31%;}
+.p-r20t15 {position: absolute; right: 20%; top: 15%;}
+.p-r10t15 {position: absolute; right: 10%; top: 15%;}
+
+/*右下*/
+.p-rb {position: absolute; right: 0%; bottom: 0%;}
+.p-rb1 {position: absolute; right: 1%; bottom: 1%;}
+
+/*浮动*/
+.fl {float: left;}
+.fr {float: right;}
+
+/*背景图对齐位置 
+    top left
+    top center
+    top right
+    center left
+    center center
+    center right
+    bottom left
+    bottom center
+    bottom right
+*/
+.bgp-center {background-position: 50% 50%;}
+.bgp-l {background-position: 0% 50%;}
+.bgp-r {background-position: 100% 50%;}
+.bgp-t {background-position: 50% 0%;}
+.bgp-b {background-position: 50% 100%;}
+.bgp-lt {background-position: 0% 0%;}
+.bgp-lb {background-position: 0% 100%;}
+.bgp-rt {background-position: 100% 0%;}
+.bgp-rb {background-position: 100% 100%;}
+

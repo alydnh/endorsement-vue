@@ -1,0 +1,197 @@
+  .document-list{
+    position: absolute;
+    top: 180px;
+    background-color: #f2f5fa;
+    bottom: 0px;
+    left:calc(5% + 120px);
+    right: 0px;
+  }
+  .document-list .document-tab{
+    padding-left: 20px;
+    height: 100px;
+    line-height: 100px;
+    vertical-align: middle;
+    width: 300px;
+    float: left;
+    position: relative;
+  }
+
+  .document-list .document-filter{
+    float: right;
+    position: relative;
+    height: 100px;
+    margin-right: 40px;
+    line-height: 100px;
+    vertical-align: middle;
+  }
+
+  .document-list-view{
+    position: absolute;
+    top: 100px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow-y: auto;
+  }
+
+  .document-item{
+    position: relative;
+    float: left;
+    background-color: white;
+    margin-left: 2%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .document-body{
+    float: left;
+  }
+
+  .document-operation{
+    float:right;
+  }
+
+  .document-field{
+    display: block;
+    float: left;
+    width: 150px;
+  }
+
+  .document-field span{
+    display: block;
+    float: left;
+    width: 100%;
+  }
+
+  .document-title{
+    color:#409BFC;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
+  .document-tab a{
+    padding:10px;
+    color:#2c96fd
+  }
+
+  .document-tab a.active{
+    font-weight: 800;
+    text-decoration: underline;
+  }
+
+
+    .ptit-form-item-inline .ptit-form-item{
+    display: inline-block;
+    width:350px;
+    min-width: 150px;
+  }
+
+  .ptit-form-item label{
+    text-align: right;
+    vertical-align: middle;
+    float: left;
+    line-height: 1;
+    padding: 8px 12px 9px 0;
+    box-sizing: border-box;
+  }
+  .ptit-form-item-content{
+    position: relative;
+    line-height: 32px;
+    padding-bottom: 18px;
+  }
+
+  .ptit-form-button-item .ptit-form-item-content{
+    padding-bottom: 0px;
+  }
+
+  .ptit-form-item{
+    margin-bottom: 5px;
+  }
+  .ptit-form-item:before,
+  .ptit-form-item:after{
+    content: '';
+    display: table;
+  }
+
+  .ptit-form-item:after{
+    clear:both;
+  }
+
+  .ptit-form-item .el-input__inner{
+    height:initial;
+  }
+
+  .ptit-form-item .el-date-editor,
+  .ptit-form-item .el-select{
+    width:100%;
+  }
+
+  .ptit-input-view{
+    border-bottom: dotted 1px;
+  }
+
+  .ptit-form>h3{
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
+
+  .ptit-form>h3 .ptit-form-item{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .ptit-form-item-error-message{
+    margin-top:1px;
+    line-height: 1;
+    position: absolute;
+  }
+
+  .ptit-form-item-error-message i{
+    margin-right: 1px;
+    color:red;
+    font-size:12px;
+  }
+
+  .ptit-input-default input[type=text]{
+    display: inline-block;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #bfcbd9;
+    box-sizing: border-box;
+    color: #1f2d3d;
+    font-size: inherit;
+    height: 36px;
+    line-height: 1;
+    outline: none;
+    padding: 3px 10px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 100%;
+  }
+
+  .ptit-form-item-error input[type=text]{
+    border-color:red;
+    border-width:1px;
+  }
+
+  .ptit-attachment-upload-view a{
+    padding:10px;
+  }
+
+  .el-upload-list li{
+    float: left;
+    width: auto;
+  }
+
+  .ptit-form-item .el-upload-list--text .el-upload-list__item:first-child{
+    margin-top:5px;
+  }
+
+  .ptit-attachment-upload a{
+    border-bottom: 1px dotted;
+  }
+
+  .ptit-attachment-upload-view a{
+    color:black;
+    margin-right:10px;
+  }

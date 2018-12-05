@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+.win-main
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	min-width: 1000px;
+	min-height: 590px;
+}
+
+/*水平布局*/
+.h-left38{ position: absolute; width: 38%; left: 0%;}
+
+.h-center20{position: absolute;width: 20%;left: 40%;}
+.h-center30{position: absolute;width: 30%;left: 35%;}
+.h-center68{position: absolute;width: 68%;left: 16%;}
+.h-center76{position: absolute;width: 76%;left: 12%;}
+.h-center90{position: absolute;width: 90%;left: 5%;}
+.h-center98{position: absolute;width: 98%;left: 1%;}
+
+.h-right60{position: absolute;width: 60%;right: 0%;}
+
+/*垂直布局*/
+.v-top10
+{
+	position: absolute;
+	height: 10%;
+	top: 0%;
+}
+
+.v-middle64
+{
+	position: absolute;
+	height: 64%;
+	top: 18%;
+}
+
+.v-bottom8
+{
+	position: absolute;
+	height: 8%;
+	bottom: 0%;
+}
+
+/*尺寸*/
+.h8{height: 8%;}
+.h92{height: 92%;}
+
+/*定位*/
+.p-l10b15
+{
+	position: absolute;
+	left: 10%;
+	bottom: 15%;
+}
+
+.p-l5t10
+{
+	position: absolute;
+	left: 5%;
+	top: 10%;
+}
+
+/*背景图对齐位置*/
+.bgp-l1{ background-position: 1% 50%; }
+
+
+

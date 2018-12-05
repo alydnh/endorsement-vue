@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+@import url("base_layout.css");
+@import url("default_layout.css");
+@import url("default_img.css");
+@import url("default_icon.css");
+@import url("base_style.css");
+@import url("default_style.css");
+@import url("user_layout.css");
+
+.bsave{width:8%}
+.company {width:20%; right:calc(10% + 0px);}
+.info_text{top:6%}
+.info_table{top:14%; height:20%; }
+.security_text{top:40%;}
+.fixpw{top:45%;}
+.fixphone{top:56%;}
+.fixemail{top:67%;}
+
+
+
+
+
+

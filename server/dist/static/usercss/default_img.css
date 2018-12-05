@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/*±≥æ∞*/
+.bg-login { background-image: url(img/bg.jpg); background-size: cover;}
+.bg-reg { background-image: url(img/img_reg.png);background-size: cover;}
+
+/*±Í ∂*/
+.logo-login-head { background-image: url(img/logo.png); background-repeat: no-repeat; }
+.logo-login-foot { background-image: url(img/lgogo2.png); background-repeat: no-repeat; }
+
+
+/*Õº∆¨*/
+.img-login-reg { background-image: url(img/img2.png); background-size: cover; }
+.img-login-tip { background-image: url(img/tips.png); background-size: cover; }
+.img-code { background-image: url(img/codepic.png); background-repeat: no-repeat; }
+

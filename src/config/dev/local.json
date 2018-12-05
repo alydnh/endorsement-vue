@@ -1,0 +1,5 @@
+{
+    "cars": "http://10.108.52.34:8082",
+    "resource": "http://10.108.52.34:18079",
+    "parking": "http://localhost:8081"
+}

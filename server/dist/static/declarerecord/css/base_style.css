@@ -1,0 +1,237 @@
+@charset "utf-8";
+
+/*尺寸*/
+.h100 {height: 100%;}
+.w100 {width: 100%;}
+
+/*元素样式*/
+/*大按钮-橙色*/
+.b-orange-h60 {
+	width: 400px;
+	height: 60px;
+	background-color: orange;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	border: none;
+	box-shadow: 0 3px 5px  rgba(247,177,30,0.6);
+}
+
+/*小按钮-橙色*/
+.b-orange-h44 {
+	width: 105px;
+	height: 44px;
+	background-color: orange;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	border: none;
+}
+
+/*小查找按钮-蓝色*/
+.b-blue-h48 {
+	width: 105px;
+	height: 48px;
+	background-color: #5eaaf8;
+	border-radius: 0px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	border: none;
+}
+
+/*发送验证码按钮-蓝色*/
+.b-blue-h39 {
+	width: 99px;
+	height: 39px;
+	background-color: #5eaaf8;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 16px;
+	border: none;
+}
+
+/*筛选按钮-蓝色*/
+.b-blue-filter {
+	width: 46px;
+	height: 41px;
+	background-color: #56a8fe;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 12px;
+	border: none;
+}
+
+/*筛选按钮-灰色*/
+.b-grey-filter {
+	width: 46px;
+	height: 41px;
+	background-color: #B3C4D6;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 12px;
+	border: none;
+}
+
+/*查找按钮-灰色*/
+.b-grey-search {
+	width: 60px;
+	height: 41px;
+	background-color: #B3C4D6;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 12px;
+	border: none;
+}
+
+/*更多选项按钮-白底灰框*/
+.b-white-option {
+	width: 68px;
+	height: 30px;
+	background-color: white;
+	border-radius: 5px;
+	text-align: center;
+	color: lightgrey;
+	cursor: pointer;
+	font-size: 12px;
+	border: 1px solid lightgrey;
+}
+
+/*小输入框*/
+.input-style-small {
+	width: 230px;
+	height: 40px;
+	border: 1px solid lightgrey;
+	border-radius: 4px;
+	outline: none;
+	font-size: 14px;
+	color: grey;
+	cursor: pointer;
+}
+
+/*中输入框*/
+.input-style-middle {
+	width: 338px;
+	height: 60px;
+	border: 1px solid lightgrey;
+	border-radius: 2px;
+	outline: none;
+	font-size: 16px;
+	color: grey;
+	cursor: pointer;
+}
+
+/*大输入框*/
+.input-style-big {
+	width: 500px;
+	height: 60px;
+	border: 1px solid lightgrey;
+	border-radius: 2px;
+	outline: none;
+	font-size: 16px;
+	color: #F7B11E;
+	cursor: pointer;
+}
+
+/*登录界面输入框*/
+.login-input-style {
+	width: 400px;
+	height: 60px;
+	border: 1px solid lightgrey;
+	border-radius: 2px;
+	outline: none;
+	font-size: 16px;
+	color: #C0BEC4;
+	cursor: pointer;
+}
+
+/*多选框-大*/
+.select-style-big {
+	width: auto;
+	padding: 0 3%;
+	margin: 0;
+	height: 42px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: grey;
+	font-size: 16px;
+}
+
+/*多选框-小*/
+.select-style-small {
+	width: 180px;
+	padding: 0 1%;
+	margin: 0;
+	height: 55px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: grey;
+	font-size: 14px;
+}
+
+/*勾选框*/
+.input-style {width: 16px; height: 16px;}
+
+/*弹出框-小*/
+.white-board-small {
+	width: 268px;
+	height: 273px;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 0px 25px rgba(10,10,10,0.3);
+	z-index: 99;
+}
+
+/*弹出框-样式*/
+.white-board-style {
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 0px 25px rgba(10,10,10,0.3);
+	z-index: 99;
+}
+.white-board-style2 {
+	background-color: white;
+	border-radius: 1px;
+	box-shadow: 0 0px 25px rgba(3,3,3,0.1);
+	z-index: 99;
+}
+
+/*弹出气泡框-样式*/
+.white-bubble-style {
+	position: absolute;
+	top: 16%;
+	right: 1%;
+	width: 6%;
+	height: 13%;
+	background-color: white;
+	border: 1px solid lightgrey;
+	border-radius: 6px;
+	box-shadow: 5px 5px 15px rgba(10,10,10,0.2);
+	z-index: 9999;
+}
+
+.white-bubble-style-small {
+	position: absolute;
+	top: 16%;
+	right: 1%;
+	width: 6%;
+	height: 8%;
+	background-color: white;
+	border: 1px solid lightgrey;
+	border-radius: 6px;
+	box-shadow: 5px 5px 15px rgba(10,10,10,0.2);
+	z-index: 9999;
+}

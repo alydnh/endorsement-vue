@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+
+/*全局布局*/
+body {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+/*尺寸*/
+.h100 {height: 100%;}
+.w100 {width: 100%;}
+
+/*水平布局*/
+.h-left30 {position: absolute; width: 30%; left: 0%;}
+.h-center20 {position: absolute; width: 20%; left: 40%;}
+.h-center30 {position: absolute; width: 30%; left: 35%;}
+.h-center50 {position: absolute; width: 50%; left: 25%;}
+.h-center68 {position: absolute; width: 68%; left: 16%;}
+.h-center76 {position: absolute; width: 76%; left: 12%;}
+.h-center80 {position: absolute; width: 80%; left: 10%;}
+.h-center90 {position: absolute; width: 90%; left: 5%;}
+.h-right50 {position: absolute; width: 50%; right: 0%;}
+.h-right70 {position: absolute; width: 70%; right: 0%;}
+
+/*垂直布局*/
+.v-top10 {position: absolute; height: 10%; top: 0%;}
+.v-top20 {position: absolute; height: 20%; top: 0%;}
+.v-middle64 {position: absolute; height: 64%; top: 18%;}
+.v-middle70 {position: absolute; height: 70%; top: 15%;}
+.v-bottom8 {position: absolute; height: 8%; bottom: 0%;}
+.v-bottom10 {position: absolute; height: 10%; bottom: 0%;}
+
+/*元素定位-8个方向*/
+/*左*/
+.p-l {position: absolute; left: 0%;}
+.p-l1 {position: absolute; left: 1%;}
+
+/*右*/
+.p-r {position: absolute; right: 0%;}
+.p-r1 {position: absolute; right: 1%;}
+
+/*上*/
+.p-t {position: absolute; top: 0%;}
+.p-t1 {position: absolute; top: 1%;}
+
+/*下*/
+.p-b {position: absolute; bottom: 0%;}
+.p-b1 {position: absolute; bottom: 1%;}
+
+/*左上*/
+.p-lt {position: absolute; left: 0%; top: 0%;}
+.p-lt1 {position: absolute; left: 1%; top: 1%;}
+.p-l5t10 {position: absolute; left: 5%; top: 10%;}
+
+/*左下*/
+.p-lb {position: absolute; left: 0%; bottom: 0%;}
+.p-lb1 {position: absolute; left: 1%; bottom: 1%;}
+.p-l10b15 {position: absolute; left: 10%; bottom: 15%;}
+
+/*右上*/
+.p-rt {position: absolute; right: 0%; top: 0%;}
+.p-rt1 {position: absolute; right: 1%; top: 1%;}
+
+/*右下*/
+.p-rb {position: absolute; right: 0%; bottom: 0%;}
+.p-rb1 {position: absolute; right: 1%; bottom: 1%;}
+
+/*浮动*/
+.fl {float: left;}
+.fr {float: right;}
+
+/*背景图对齐位置 
+    top left
+    top center
+    top right
+    center left
+    center center
+    center right
+    bottom left
+    bottom center
+    bottom right
+*/
+.bgp-center {background-position: 50% 50%;}
+.bgp-l {background-position: 0% 50%;}
+.bgp-r {background-position: 100% 50%;}
+.bgp-t {background-position: 50% 0%;}
+.bgp-b {background-position: 50% 100%;}
+.bgp-lt {background-position: 0% 0%;}
+.bgp-lb {background-position: 0% 100%;}
+.bgp-rt {background-position: 100% 0%;}
+.bgp-rb {background-position: 100% 100%;}
+
+
+/*元素样式*/
+/*大按钮-橙色*/
+.b-orange-h60 {
+	width: 400px;
+	height: 60px;
+	background-color: orange;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	border: none;
+	box-shadow: 0 3px 5px  rgba(247,177,30,0.6);
+}
+
+/*小按钮-橙色*/
+.b-orange-h44 {
+	width: 105px;
+	height: 44px;
+	background-color: orange;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	border: none;
+}
+
+/*小查找按钮-蓝色*/
+.b-blue-h48 {
+	width: 105px;
+	height: 48px;
+	background-color: #5eaaf8;
+	border-radius: 0px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	border: none;
+}
+
+/*发送验证码按钮-蓝色*/
+.b-blue-h39 {
+	width: 99px;
+	height: 39px;
+	background-color: #5eaaf8;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 16px;
+	border: none;
+}
+
+/*筛选按钮-蓝色*/
+.b-blue-filter {
+	width: 46px;
+	height: 41px;
+	background-color: #56a8fe;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 12px;
+	border: none;
+}
+
+/*筛选按钮-灰色*/
+.b-grey-filter {
+	width: 46px;
+	height: 41px;
+	background-color: #B3C4D6;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 12px;
+	border: none;
+}
+
+/*小输入框*/
+.input-style-small {
+	width: 230px;
+	height: 40px;
+	border: 1px solid lightgrey;
+	border-radius: 4px;
+	outline: none;
+	font-size: 14px;
+	color: grey;
+	cursor: pointer;
+}
+
+/*中输入框*/
+.input-style-middle {
+	width: 338px;
+	height: 60px;
+	border: 1px solid lightgrey;
+	border-radius: 2px;
+	outline: none;
+	font-size: 16px;
+	color: grey;
+	cursor: pointer;
+}
+
+/*大输入框*/
+.input-style-big {
+	width: 500px;
+	height: 60px;
+	border: 1px solid lightgrey;
+	border-radius: 2px;
+	outline: none;
+	font-size: 16px;
+	color: #F7B11E;
+	cursor: pointer;
+}
+
+/*登录界面输入框*/
+.login-input-style {
+	width: 400px;
+	height: 60px;
+	border: 1px solid lightgrey;
+	border-radius: 2px;
+	outline: none;
+	font-size: 16px;
+	color: #C0BEC4;
+	cursor: pointer;
+}
+
+/*多选框-大*/
+.select-style-big {
+	width: 225px;
+	padding: 0 1%;
+	margin: 0;
+	height: 46px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: grey;
+	font-size: 16px;
+}
+
+/*多选框-小*/
+.select-style-small {
+	width: 180px;
+	padding: 0 1%;
+	margin: 0;
+	height: 35px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: grey;
+	font-size: 14px;
+}
+
+/*勾选框*/
+.input-style {width: 16px; height: 16px;}
+
+/*弹出框-小*/
+.white-board-small {
+	width: 268px;
+	height: 273px;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 0px 25px rgba(10,10,10,0.3);
+	z-index: 99;
+}
+
+/*弹出框-样式*/
+.white-board-style {
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 0px 25px rgba(10,10,10,0.3);
+	z-index: 99;
+}
+
+
+
+
+
+
+
+
+
+
+

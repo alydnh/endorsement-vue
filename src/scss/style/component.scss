@@ -1,0 +1,486 @@
+@import '_variables.scss';
+
+/*-----------------------*/
+/* $Catalog 目录
+-------------------------*/
+/**
+ * Button            按钮
+ * Navigation bar    网页重置
+ * Jumbotron         网页跨屏
+ * Thumbnail         缩略图
+ * Footer            页脚
+ **/
+
+/*-----------------------*/
+/* &Button
+-------------------------*/
+.btn {
+    /*按钮基础架构*/
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin: 0;
+    padding: 0 16px;
+    height: 36px;
+    min-width: 64px; //即使按钮没有字，也会显示一个64px的空按钮
+    line-height: 36px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* Style */
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Helvetica', 'Arial', 'Roboto', sans-serif, '微软雅黑';
+    letter-spacing: 0;
+    // text-transform: uppercase; //强制将按钮的文字转换成大写形式
+    text-decoration: none;
+    color: $ptit-black;
+    background-color: $ptit-grey-light;
+    border-radius: 3px;
+    outline: none;
+
+    /* interact */
+    cursor: pointer;
+    overflow: hidden; //超出的文字会隐藏
+    user-select: none; //使用者选不中按钮里的字
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: 0.1s;
+
+    user-drag: none; //使用者不能拖动按钮
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+
+    &:hover {
+        background-color: $ptit-grey-dark;
+        color: $ptit-grey-lighter;
+    }
+
+    &:active {
+        background-color: $ptit-grey-light;
+    }
+}
+
+/* 按钮失效状态 */
+.btn-disabled,
+.btn-disabled:hover,
+.btn-disabled:active,
+.btn-disabled:focus {
+    color: $ptit-grey-light;
+    pointer-events: none; //指定滑鼠的事件为无
+    background-color: #d1d2d3;
+}
+
+/* Button color define */
+.btn.btn--primary {
+    color: $ptit-grey;
+    background-color: $ptit-primary;
+
+    &:hover {
+        color: $ptit-grey-darker;
+        background-color: $ptit-primary-darker;
+    }
+
+    &:active {
+        color: $ptit-grey;
+        background-color: $ptit-primary-lighter;
+    }
+}
+
+.btn.btn--secondary {
+    color: $ptit-grey;
+    background-color: $ptit-secondary;
+
+    &:hover {
+        color: $ptit-grey-darker;
+        background-color: $ptit-secondary-darker;
+    }
+
+    &:active {
+        color: $ptit-grey;
+        background-color: $ptit-secondary-lighter;
+    }
+}
+
+.btn.btn--positive {
+    color: $ptit-grey;
+    background-color: $ptit-positive;
+
+    &:hover {
+        color: $ptit-grey-darker;
+        background-color: $ptit-positive-darker;
+    }
+
+    &:active {
+        color: $ptit-grey;
+        background-color: $ptit-positive-lighter;
+    }
+}
+
+.btn.btn--negative {
+    color: $ptit-grey;
+    background-color: $ptit-negative;
+
+    &:hover {
+        color: $ptit-grey-darker;
+        background-color: $ptit-negative-darker;
+    }
+
+    &:active {
+        color: $ptit-grey;
+        background-color: $ptit-negative-lighter;
+    }
+}
+
+.btn.btn--grey {
+    color: $ptit-grey-lighter;
+    background-color: $ptit-grey;
+
+    &:hover {
+        color: $ptit-grey-lighter;
+        background-color: $ptit-grey-darker;
+    }
+
+    &:active {
+        color: $ptit-grey;
+        background-color: $ptit-grey-lighter;
+    }
+}
+
+/* Button Sizes */
+.btn.btn--lg {
+    font-size: 22px;
+    line-height: 56px;
+    height: 56px;
+    font-weight: 400;
+}
+
+.btn.btn--md {
+    font-size: 18px;
+    line-height: 45px;
+    height: 45px;
+    font-weight: 400;
+}
+
+.btn.btn--sm {
+    font-size: 11px;
+    line-height: 29px;
+    height: 29px;
+    font-weight: 400;
+    padding: 0 13px;
+}
+
+.btn.btn--xs {
+    font-size: 10px;
+    line-height: 23px;
+    height: 23px;
+    font-weight: 400;
+    padding: 0 8px;
+    min-width: 36px;
+}
+
+/*-----------------------*/
+/* &Input Define
+-------------------------*/
+.input {
+    display: inline-block;
+    vertical-align: middle;
+    outline: none;
+    color: #7d7d7d;
+    font-size: 14px;
+    text-indent: 5px;
+    border: 1px solid #7d7d7d;
+    border-radius: 5px;
+
+    &:hover {
+        border: 1px solid #61bcff;
+        box-shadow: 0 0 6px #a0d7ff;
+        transition: 0.3s;
+    }
+
+    &::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: #c8c8c8;
+    }
+}
+
+.input.input-lg {
+    width: 350px;
+    height: 30px;
+}
+
+.input.input-md {
+    width: 175px;
+    height: 30px;
+}
+
+.input.input-sm {
+    width: 82px;
+    height: 30px;
+}
+
+.input.input-xs {
+    width: 42px;
+    height: 30px;
+
+    &::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: #c8c8c8;
+        text-align: center;
+    }
+}
+
+.input-error {
+    outline: none;
+    color: #7d7d7d;
+    font-size: 14px;
+    border: 2px solid #e08c72;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #e08c72;
+    transition: 0.3s;
+
+    &:hover {
+        border: 2px solid #e0613a;
+        box-shadow: 0 0 6px #e08c72;
+        transition: 0.3s;
+    }
+}
+
+/*-----------------------*/
+/* &Select Define
+-------------------------*/
+select {
+    height: 30px;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+    outline: none;
+    color: #7d7d7d;
+    font-size: 14px;
+    transition: 0.2s;
+
+    &:hover {
+        border: 1px solid #a0d7ff;
+        box-shadow: 0 0 6px #a0d7ff;
+    }
+}
+
+.select-lg {
+    width: 350px;
+}
+
+.select-md {
+    width: 175px;
+}
+
+.select-sm {
+    width: 80px;
+}
+
+.select-xs {
+    width: 40px;
+}
+
+/*-----------------------*/
+/* &Search Define
+-------------------------*/
+.search-lg {
+    width: 350px;
+    height: 30px;
+    outline: none;
+    color: #7d7d7d;
+    font-size: 14px;
+    text-indent: 8px;
+    border: 1px solid #7d7d7d;
+    border-radius: 20px;
+    transition: 0.2s;
+
+    &:hover {
+        border: 1px solid #7d7d7d;
+        box-shadow: 0 0 6px #7d7d7d;
+    }
+}
+.search-lg::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #c8c8c8;
+}
+
+.search-md {
+    width: 175px;
+    height: 30px;
+    outline: none;
+    color: #7d7d7d;
+    font-size: 14px;
+    text-indent: 8px;
+    border: 1px solid #7d7d7d;
+    border-radius: 20px;
+    transition: 0.2s;
+
+    &:hover {
+        border: 1px solid #7d7d7d;
+        box-shadow: 0 0 6px #7d7d7d;
+    }
+}
+.search-md::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #c8c8c8;
+}
+
+.fa.fa-search.fa-md.color--light-grey:hover {
+    color: $ptit-grey-dark;
+    transition: 0.3s;
+}
+
+/*-----------------------*/
+/* &Checkbox Define
+-------------------------*/
+.checkbox-yellow[type='checkbox'] {
+    -webkit-appearance: none; /*清除复选框默认样式*/
+    background: #fff url('./img/yellow.png'); /*复选框的背景图，就是上图*/
+    height: 18px; /*高度*/
+    vertical-align: middle;
+    width: 18px;
+    outline: none;
+    &:hover {
+        box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+        transition: 0.01s;
+    }
+}
+.checkbox-yellow[type='checkbox']:checked {
+    background-position: -40px 0;
+}
+
+.checkbox-blue[type='checkbox'] {
+    -webkit-appearance: none; /*清除复选框默认样式*/
+    background: #fff url(img/blue.png); /*复选框的背景图，就是上图*/
+    height: 18px; /*高度*/
+    vertical-align: middle;
+    width: 18px;
+    outline: none;
+    &:hover {
+        box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+        transition: 0.01s;
+    }
+}
+.checkbox-blue[type='checkbox']:checked {
+    background-position: -40px 0;
+}
+
+.checkbox-red[type='checkbox'] {
+    -webkit-appearance: none; /*清除复选框默认样式*/
+    background: #fff url(img/red.png); /*复选框的背景图，就是上图*/
+    height: 18px; /*高度*/
+    vertical-align: middle;
+    width: 18px;
+    outline: none;
+    &:hover {
+        box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+        transition: 0.01s;
+    }
+}
+.checkbox-red[type='checkbox']:checked {
+    background-position: -40px 0;
+}
+
+.checkbox-green[type='checkbox'] {
+    -webkit-appearance: none; /*清除复选框默认样式*/
+    background: #fff url(img/green.png); /*复选框的背景图，就是上图*/
+    height: 18px; /*高度*/
+    vertical-align: middle;
+    width: 18px;
+    outline: none;
+    &:hover {
+        box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+        transition: 0.01s;
+    }
+}
+.checkbox-green[type='checkbox']:checked {
+    background-position: -40px 0;
+}
+
+.checkbox-grey[type='checkbox'] {
+    -webkit-appearance: none; /*清除复选框默认样式*/
+    background: #fff url(img/grey.png); /*复选框的背景图，就是上图*/
+    height: 18px; /*高度*/
+    vertical-align: middle;
+    width: 18px;
+    outline: none;
+    &:hover {
+        box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+        transition: 0.01s;
+    }
+}
+.checkbox-grey[type='checkbox']:checked {
+    background-position: -40px 0;
+}
+
+.checkbox-mono[type='checkbox'] {
+    -webkit-appearance: none; /*清除复选框默认样式*/
+    background: #fff url(img/mono.png); /*复选框的背景图，就是上图*/
+    height: 18px; /*高度*/
+    vertical-align: middle;
+    width: 18px;
+    outline: none;
+    &:hover {
+        box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+        transition: 0.01s;
+    }
+}
+.checkbox-mono[type='checkbox']:checked {
+    background-position: -40px 0;
+}
+
+/*-----------------------*/
+/* &Checkbox Define
+-------------------------*/
+.alert {
+    width: 320px;
+    height: 45px;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    text-indent: -200px;
+    display: inline-block;
+}
+.alert-success {
+    background-color: $ptit-positive-lighter;
+    box-shadow: 0 0 5px $ptit-positive-lighter;
+}
+.alert-success > i {
+    position: relative;
+    left: 290px;
+    color: #fff;
+}
+
+.alert-error {
+    background-color: $ptit-negative;
+    box-shadow: 0 0 5px $ptit-negative-lighter;
+}
+.alert-error i {
+    position: relative;
+    left: 290px;
+    color: #fff;
+}
+
+.alert-info {
+    background-color: $ptit-secondary;
+    box-shadow: 0 0 5px $ptit-secondary-lighter;
+}
+.alert-info i {
+    position: relative;
+    left: 290px;
+    color: #fff;
+}
+
+.alert-warning {
+    background-color: $ptit-primary;
+    box-shadow: 0 0 5px $ptit-primary-lighter;
+}
+.alert-warning i {
+    position: relative;
+    left: 290px;
+    color: #fff;
+}

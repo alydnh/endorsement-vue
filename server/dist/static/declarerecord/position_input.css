@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+@import url("css/base_layout.css");
+@import url("css/base_style.css");
+@import url("css/base_img_icon.css");
+
+
+
+.header {
+	/*background-color: lightgrey;*/
+	position: absolute;
+	height: 6%;
+	top: 0%;
+	border-bottom: 1px solid lightgrey;
+}
+.logo-login-head {
+	position: absolute;
+	left: 0.5%;
+	top: 21%;
+}
+.header_right_icon {
+	position: absolute;
+	top: 0%;
+	left: 96.5%;
+	width: 100%;
+	height: 100%;
+	background-image: url(img/header_right_icon.gif);
+	background-repeat: no-repeat;
+}
+.user_icon {
+	position: absolute;
+	top: 0%;
+	left: 87%;
+	width: 100%;
+	height: 100%;
+	background-image: url(img/user_icon.gif);
+	background-repeat: no-repeat;
+	border-left: 1px solid lightgrey;
+}
+.header_tips {
+	position: absolute;
+	top: 0%;
+	left: 83.5%;
+	width: 100%;
+	height: 100%;
+	background-image: url(img/header_tips.gif);
+	background-repeat: no-repeat;
+	border-left: 1px solid lightgrey;
+}
+
+
+.aside {
+	position: absolute;
+	width: 17%;
+	height: 94%;
+	top: 6%;
+	/*background-color: lightgrey;*/
+	border-right: 1px solid lightgrey;
+}
+
+
+.user_info {
+	position: absolute;
+	height: 6%;
+	width: 83%;
+	left: 17.1%;
+	top: 6.1%;
+	border-bottom: 1px solid lightgrey;
+	background-color: #fbfbfb;
+}
+.user_info_text {
+	position: absolute;
+	top: 25%;
+}
+
+.user_info button {
+	position: absolute;
+	top: 13%;
+	right: 2%;
+	width: 9%;
+	color: white;
+	font-size: 15px;
+	box-shadow: 0 3px 5px rgba(247,177,30,0.6);
+}
+.building {
+	position: absolute;
+	top: 25%;
+	left: 74.6%;
+}
+
+
+
+
+
+.body {
+	position: absolute;
+	background-color: #f1f5f9;
+	top: 12.2%;
+	right: 0.05%;
+	height: 87.9%;
+	width: 82.9%;
+}
+.search_button {
+	position: absolute;
+	top: 16%;
+	right: 3%;
+	width: 105px;
+	height: 40px;
+	background-color: #5eaaf8;
+	border-radius: 0px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 14px;
+	border: none;
+}
+.table_style {
+	position: absolute;
+	top: 31%;
+	left: 3%;
+	width: 100%;
+	height: 100%;
+}
+.table_style > table {
+	width: 94%;
+	height: 45%;
+	border-spacing: 2px;
+	border: 1px solid lightgrey;
+}
+
+
+
+
+
+.bottom_num_select {
+	position: absolute;
+	top: 47.5%;
+	left: 40%;
+}
+.bottom_num_select select {
+	width: 100px;
+	height: 25px;
+	text-align: center;
+	position: absolute;
+	color: grey;
+	font-size: 15px;
+	letter-spacing: 2px;
+}
+.bottom_num {
+	position: absolute;
+	top: 47.5%;
+	left: 58%;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+}
+.bottom_num table {
+	width: 30%;
+	height: 12px;	
+}
+.left_num_button1 {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 48%;
+	left: 51%;
+}
+.left_num_button2 {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 48%;
+	left: 54%;
+}
+.left_num_button3 {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 48%;
+	left: 88%;
+}
+.left_num_button4 {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 48%;
+	left: 91%;
+}
+.bottom_blue_square {
+	width: 25px;
+	height: 25px;
+	background-color: grey;
+	border-radius: 3px;
+	position: absolute;
+	top: 48%;
+	left: 57.5%;
+}
+.bottom_grey_square {
+	width: 25px;
+	height: 25px;
+	background-color: lightgrey;
+	border-radius: 3px;
+	position: absolute;
+	top: 48%;
+	left: 84%;
+}

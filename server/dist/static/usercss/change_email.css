@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+body {
+	margin: 0 auto;
+	width: 1916px;
+	height: 1079px;
+}
+
+.header {
+	width: 1916px;
+	height: 67px;
+	/*border: 1px solid olive;*/
+	border-bottom: 2px solid lightgrey;
+	background-color: white;
+	position: relative;
+}
+.grey_mask {
+	float: left;
+	width: 1668px;
+	height: 943px;
+	background-color: grey;
+	opacity: 0.5;
+	position: absolute;
+	top: 69px;
+	left: -1px;
+	z-index: 9990;
+}
+.white_board {
+	width: 870px;
+	height: 640px;
+	background-color: white;
+	border-radius: 4px;
+	box-shadow: 0 0px 25px rgba(10,10,10,0.3);
+	position: absolute;
+	top: 130px;
+	left: 400px;
+	z-index: 9991;
+}
+.white_board_text {
+	position: absolute;
+	top: 27px;
+	left: 330px;
+}
+.buttonX {
+	background-image: url(img/iconX.png);
+	width: 27px;
+	height: 27px;
+	position: absolute;
+	top: 35px;
+	left: 805px;
+	z-index: 9992;
+	box-shadow: none;
+	border: none;
+}
+/*.iconX {
+	width: 27px;
+	height: 27px;
+	background-image: url(img/iconX.png);
+	position: absolute;
+	top: 35px;
+	left: 805px;
+	z-index: 9992;
+}*/
+.white_board_hr {
+	position: absolute;
+	top: 90px;
+	left: 35px;
+}
+.email_icon {
+	width: 73px;
+	height: 62px;
+	background-image: url(img/email.png);
+	position: absolute;
+	top: 130px;
+	left: 265px;
+	z-index: 9999;
+}
+.email_icon_text {
+	position: absolute;
+	top: 130px;
+	left: 355px;
+}
+.email_verify_code {
+	position: absolute;
+	top: 245px;
+	left: 85px;
+	width: 800px;
+	color: grey;
+	color: grey;
+	letter-spacing: 2px;
+}
+
+.email_verify_code input {
+	height: 50px;
+	width: 335px;
+	border-radius: 3px;
+	border: 1px solid #e3e3e3;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 4px;
+	text-align: left;
+	color: grey;
+}
+.red_star1 {
+	font-size: 18px;
+	color: red;
+}
+.send_email_verify_code {
+	width: 100px;
+	height: 36px;
+	position: absolute;
+	top: 254px;
+	left: 498px;
+	background-color: #54b9e9;
+	border-radius: 8px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 14px;
+	border: 1px solid #7da4e4;
+}
+.red_star2 {
+	font-size: 18px;
+	color: red;
+}
+.email_verify_code2 {
+	position: absolute;
+	top: 320px;
+	left: 66px;
+	width: 800px;
+	color: grey;
+	color: grey;
+	letter-spacing: 2px;
+}
+.email_verify_code2 input {
+	height: 50px;
+	width: 335px;
+	border-radius: 3px;
+	border: 1px solid #e3e3e3;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 4px;
+	text-align: left;
+	color: grey;
+}
+.email_verify_code3 {
+	position: absolute;
+	top: 396px;
+	left: 120px;
+	width: 800px;
+	color: grey;
+	color: grey;
+	letter-spacing: 2px;
+}
+.email_verify_code3 input {
+	height: 50px;
+	width: 335px;
+	border-radius: 3px;
+	border: 1px solid #e3e3e3;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 4px;
+	text-align: left;
+	color: grey;
+}
+.red_star3 {
+	font-size: 18px;
+	color: red;
+}
+.text_1 {
+	position: absolute;
+	top: 480px;
+	left: 370px;
+}
+.link {
+	width: 335px;
+	height: 50px;
+	position: absolute;
+	top: 540px;
+	left: 271px;
+	background-color: orange;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	border: none;
+	box-shadow: 0 3px 5px  rgba(247,177,30,0.6);
+}
+
+.header_logo {
+	width: 248px;
+	height: 67px;
+	background-image: url(img/logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.header_right_icon {
+	width: 77px;
+	height: 67px;
+	background: url(img/QQ图片20170717143418_04.gif);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 99;
+	border-left: 2px solid lightgrey;
+}
+.user_icon {
+	width: 194px;
+	height: 67px;
+	background: url(img/QQ图片20170717143418_03.gif);
+	position: absolute;
+	top: 0px;
+	right: 77px;
+	border-left: 2px solid lightgrey;
+}
+.header_tips {
+	width: 115px;
+	height: 67px;
+	background: url(img/QQ图片20170717143418_02.gif);
+	background-position: center;
+	position: absolute;
+	top: 0px;
+	right: 285px;
+	border-left: 2px solid lightgrey;
+}
+
+.aside {
+	width: 246px;
+	height: 1012px;
+	background-color: #fbfbfb;
+	float: left;
+	box-shadow: 0 10px 10px 0.6;
+	border-right: 2px solid lightgrey;
+	position: relative;
+
+}
+
+.user_info {
+	width: 1668px;
+	height: 69px;
+	background-color: #fbfbfb;
+	border-bottom: 2px solid lightgrey;
+	float: left;
+	position: relative;
+}
+.user_info_text {
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	letter-spacing: 3px;
+}
+
+
+
+
+
+

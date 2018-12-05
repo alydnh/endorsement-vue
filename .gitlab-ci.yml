@@ -1,0 +1,174 @@
+image: docker.ptit365.com/docker-curl:stable
+services:
+    - docker:dind
+stages:
+    - test-new-build
+    - test-new-docker-image
+    - deploy-to-test-new
+    - test-build
+    - test-docker-image
+    - deploy-to-test
+    - staging-build
+    - staging-docker-image
+    - deploy-to-staging
+    - demo-docker-image
+    - deploy-to-demo
+
+cache:
+    untracked: true
+    paths:
+        - dist/
+        - demo-dist/
+
+test-new-build-for-frontend:
+    only:
+        - developer-new
+    stage: test-new-build
+    image: docker.ptit365.com/node-10-cnpm
+    script:
+        - cnpm install
+        - npm run build --apiConfig="test-new"
+    artifacts:
+        paths:
+            - dist/
+        expire_in: 1 hrs
+
+test-new-push-docker-image:
+    only:
+        - developer-new
+    stage: test-new-docker-image
+    image: docker.ptit365.com/docker-curl:stable
+    script:
+        - docker login -u $PTIT365_DOCKER_USER_NAME -p $PTIT365_DOCKER_PASSWORD docker.ptit365.com
+        # build frontend
+        - rm -rf ./server/dist
+        - mv ./dist ./server/dist
+        - cd ./server/
+        - docker build -t docker.ptit365.com/cars-wms-frontend-test-new:ci-$CI_PIPELINE_ID .
+        # push images
+        - docker push docker.ptit365.com/cars-wms-frontend-test-new:ci-$CI_PIPELINE_ID
+
+kubernetes-test-new-deploy:
+    only:
+        - developer-new
+    stage: deploy-to-test-new
+    image: docker.ptit365.com/kubectl
+    script:
+        - kubectl get node
+        - export CARSWMS_CI_ENV=test-new
+        - export CARSWMS_ENV_NAME=default
+        - chmod u+x ./k8s-deploy/deploy.sh
+        - ./k8s-deploy/deploy.sh
+
+test-build-for-frontend:
+    only:
+        - developer
+    stage: test-build
+    image: docker.ptit365.com/node-10-cnpm
+    script:
+        - cnpm install
+        - npm run build
+    artifacts:
+        paths:
+            - dist/
+        expire_in: 1 hrs
+
+test-push-docker-image:
+    only:
+        - developer
+    stage: test-docker-image
+    image: docker.ptit365.com/docker-curl:stable
+    script:
+        - docker login -u $PTIT365_DOCKER_USER_NAME -p $PTIT365_DOCKER_PASSWORD docker.ptit365.com
+        # build frontend
+        - rm -rf ./server/dist
+        - mv ./dist ./server/dist
+        - cd ./server/
+        - docker build -t docker.ptit365.com/cars-wms-frontend-test:ci-$CI_PIPELINE_ID .
+        # push images
+        - docker push docker.ptit365.com/cars-wms-frontend-test:ci-$CI_PIPELINE_ID
+
+kubernetes-test-deploy:
+    only:
+        - developer
+    stage: deploy-to-test
+    image: docker.ptit365.com/kubectl
+    script:
+        - kubectl get node
+        - export CARSWMS_CI_ENV=test
+        - export CARSWMS_ENV_NAME=default
+        - chmod u+x ./k8s-deploy/deploy.sh
+        - ./k8s-deploy/deploy.sh
+
+staging-build-for-frontend:
+    only:
+        - developer
+    stage: staging-build
+    image: docker.ptit365.com/node-10-cnpm
+    script:
+        - cnpm install
+        - npm run build --apiConfig="demo"
+        - rm -rf demo-dist
+        - mv dist demo-dist
+        - npm run build --apiConfig="staging"
+    artifacts:
+        paths:
+            - dist/
+            - demo-dist/
+        expire_in: 1 hrs
+staging-push-docker-image:
+    only:
+        - developer
+    stage: staging-docker-image
+    image: docker.ptit365.com/docker-curl:stable
+    script:
+        - docker login -u $PTIT365_DOCKER_USER_NAME -p $PTIT365_DOCKER_PASSWORD docker.ptit365.com
+        # build frontend
+        - rm -rf ./server/dist
+        - mv ./dist ./server/dist
+        - cd ./server/
+        - docker build -t docker.ptit365.com/cars-wms-frontend-staging:ci-$CI_PIPELINE_ID .
+        # push images
+        - docker push docker.ptit365.com/cars-wms-frontend-staging:ci-$CI_PIPELINE_ID
+
+kubernetes-staging-deploy:
+    when: manual
+    environment:
+        name: Staging
+    only:
+        - developer
+    stage: deploy-to-staging
+    image: docker.ptit365.com/kubectl
+    script:
+        - kubectl get node
+        - export CARSWMS_CI_ENV=staging
+        - export CARSWMS_ENV_NAME=default
+        - chmod u+x ./k8s-deploy/deploy.sh
+        - ./k8s-deploy/deploy.sh
+
+demo-push-docker-image:
+    only:
+        - developer
+    stage: demo-docker-image
+    image: docker.ptit365.com/docker-curl:stable
+    script:
+        - docker login -u $PTIT365_DOCKER_USER_NAME -p $PTIT365_DOCKER_PASSWORD docker.ptit365.com
+        # build frontend
+        - rm -rf ./server/dist
+        - mv ./demo-dist ./server/dist
+        - cd ./server/
+        - docker build -t docker.ptit365.com/cars-wms-frontend-demo:ci-$CI_PIPELINE_ID .
+        # push images
+        - docker push docker.ptit365.com/cars-wms-frontend-demo:ci-$CI_PIPELINE_ID
+
+demo-to-deploy:
+    only:
+        - developer
+    stage: deploy-to-demo
+    image: docker.ptit365.com/docker-curl:stable
+    script:
+        - docker login -u $PTIT365_DOCKER_USER_NAME -p $PTIT365_DOCKER_PASSWORD docker.ptit365.com
+        - docker pull docker.ptit365.com/cars-wms-frontend-demo:ci-$CI_PIPELINE_ID
+        - docker login -u $CHINA_CLOUD_USER_NAME -p $CHINA_CLOUD_PASSWORD harbor.ptit365.com
+        - docker tag docker.ptit365.com/cars-wms-frontend-demo:ci-$CI_PIPELINE_ID harbor.ptit365.com/ptit-car/cars-wms-frontend-demo:ci-$CI_PIPELINE_ID
+        - docker push harbor.ptit365.com/ptit-car/cars-wms-frontend-demo:ci-$CI_PIPELINE_ID

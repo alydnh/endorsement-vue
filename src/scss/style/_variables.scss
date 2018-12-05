@@ -1,0 +1,27 @@
+//颜色定义  Color Define Variables
+$ptit-primary-darker:              #f59f00;
+$ptit-primary:                     #ffbc40;
+$ptit-primary-lighter:             #ffd280;
+
+$ptit-secondary-darker:            #20a0ff;
+$ptit-secondary:                   #61bcff;
+$ptit-secondary-lighter:           #a0d7ff;
+
+$ptit-positive-darker:             #00ab00;
+$ptit-positive:                    #3ccd3b;
+$ptit-positive-lighter:            #75e074;
+
+$ptit-negative-darker:             #e03501;
+$ptit-negative:                    #e0613a;
+$ptit-negative-lighter:            #e08c72;
+
+$ptit-default:                     #d1d2d3;
+
+$grey-base:                        #111111;
+$ptit-grey-darker:                 lighten($grey-base, 13.5%);
+$ptit-grey-dark:                   lighten($grey-base, 20.5%);
+$ptit-grey:                        lighten($grey-base, 33.5%);
+$ptit-grey-light:                  lighten($grey-base, 58.5%);
+$ptit-grey-lighter:                lighten($grey-base, 85.5%);
+$ptit-white:                       #fff;
+$ptit-black:                       #353630;

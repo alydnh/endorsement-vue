@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/*±³¾°*/
+/*.bg-login { background-image: url(../img/bg.jpg); background-size: cover;}*/
+
+/*±êÊ¶*/
+.logo-login-head { background-image: url(../img/logo.png); background-repeat: no-repeat; }
+.logo-login-foot { background-image: url(../img/lgogo2.png); background-repeat: no-repeat; }
+
+
+/*Í¼Æ¬*/
+/*.img-login-reg { background-image: url(../img/img2.png); background-size: cover; }*/
+.img-login-tip { background-image: url(../img/tips.png); background-repeat: no-repeat; }
+/*.img-code { background-image: url(../img/codepic.png); background-repeat: no-repeat; }*/
+
+.icon20{
+	height: 20px;
+	width: 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon52{
+	height: 52px;
+	width: 52px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/*20px*/
+.icon-warn20 { background-image: url(../img/tipicon.png); }
+
+/*52px*/
+.icon-user52 { background-image: url(../img/usericon.png); }
+.icon-pw52 { background-image: url(../img/PWicon.png); }
+
+.building_icon { background-image: url(../img/building.png); background-repeat: no-repeat; }
+
+.plus_icon { background-image: url(../img/pluslogo.png); background-repeat: no-repeat; }
+.delete_icon { background-image: url(../img/delete.png); background-repeat: no-repeat; }

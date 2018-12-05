@@ -1,0 +1,4 @@
+{
+    "cars": "http://ptit-cars.azure-api.cn/cars/v1",
+    "resource": "http://ptit-cars.azure-api.cn/crm"
+}

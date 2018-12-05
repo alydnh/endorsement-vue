@@ -1,0 +1,547 @@
+@charset "UTF-8";
+/*-----------------------*/
+/* $Catalog 目录
+-------------------------*/
+/**
+ * Button            按钮
+ * Navigation bar    网页重置
+ * Jumbotron         网页跨屏
+ * Thumbnail         缩略图
+ * Footer            页脚
+ **/
+/*-----------------------*/
+/* &Button
+-------------------------*/
+.btn {
+  /*按钮基础架构*/
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin: 0;
+  padding: 0 16px;
+  height: 36px;
+  min-width: 64px;
+  line-height: 36px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* Style */
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+  font-family: "Helvetica", "Arial", "Roboto", sans-serif, "微软雅黑";
+  letter-spacing: 0;
+  text-decoration: none;
+  color: #353630;
+  background-color: #a6a6a6;
+  border-radius: 3px;
+  outline: none;
+  /* interact */
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+}
+
+.btn:hover {
+  background-color: #454545;
+  color: #ebebeb;
+}
+
+.btn:active {
+  background-color: #a6a6a6;
+}
+
+/* 按钮失效状态 */
+.btn-disabled,
+.btn-disabled:hover,
+.btn-disabled:active,
+.btn-disabled:focus {
+  color: #a6a6a6;
+  pointer-events: none;
+  background-color: #d1d2d3;
+}
+
+/* Button color define */
+.btn.btn--primary {
+  color: #666666;
+  background-color: #ffbc40;
+}
+
+.btn.btn--primary:hover {
+  color: #333333;
+  background-color: #f59f00;
+}
+
+.btn.btn--primary:active {
+  color: #666666;
+  background-color: #ffd280;
+}
+
+.btn.btn--secondary {
+  color: #666666;
+  background-color: #61bcff;
+}
+
+.btn.btn--secondary:hover {
+  color: #333333;
+  background-color: #20a0ff;
+}
+
+.btn.btn--secondary:active {
+  color: #666666;
+  background-color: #a0d7ff;
+}
+
+.btn.btn--positive {
+  color: #666666;
+  background-color: #3ccd3b;
+}
+
+.btn.btn--positive:hover {
+  color: #333333;
+  background-color: #00ab00;
+}
+
+.btn.btn--positive:active {
+  color: #666666;
+  background-color: #75e074;
+}
+
+.btn.btn--negative {
+  color: #666666;
+  background-color: #e0613a;
+}
+
+.btn.btn--negative:hover {
+  color: #333333;
+  background-color: #e03501;
+}
+
+.btn.btn--negative:active {
+  color: #666666;
+  background-color: #e08c72;
+}
+
+.btn.btn--grey {
+  color: #ebebeb;
+  background-color: #666666;
+}
+
+.btn.btn--grey:hover {
+  color: #ebebeb;
+  background-color: #333333;
+}
+
+.btn.btn--grey:active {
+  color: #666666;
+  background-color: #ebebeb;
+}
+
+/* Button Sizes */
+.btn.btn--lg {
+  font-size: 22px;
+  line-height: 56px;
+  height: 56px;
+  font-weight: 400;
+}
+
+.btn.btn--md {
+  font-size: 18px;
+  line-height: 45px;
+  height: 45px;
+  font-weight: 400;
+}
+
+.btn.btn--sm {
+  font-size: 11px;
+  line-height: 29px;
+  height: 29px;
+  font-weight: 400;
+  padding: 0 13px;
+}
+
+.btn.btn--xs {
+  font-size: 10px;
+  line-height: 23px;
+  height: 23px;
+  font-weight: 400;
+  padding: 0 8px;
+  min-width: 36px;
+}
+
+/*-----------------------*/
+/* &Input Define
+-------------------------*/
+.input {
+  display: inline-block;
+  vertical-align: middle;
+  outline: none;
+  color: #7d7d7d;
+  font-size: 14px;
+  text-indent: 5px;
+  border: 1px solid #7d7d7d;
+  border-radius: 5px;
+}
+
+.input:hover {
+  border: 1px solid #61bcff;
+  -webkit-box-shadow: 0 0 6px #a0d7ff;
+          box-shadow: 0 0 6px #a0d7ff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #c8c8c8;
+}
+
+.input.input-lg {
+  width: 350px;
+  height: 30px;
+}
+
+.input.input-md {
+  width: 175px;
+  height: 30px;
+}
+
+.input.input-sm {
+  width: 82px;
+  height: 30px;
+}
+
+.input.input-xs {
+  width: 42px;
+  height: 30px;
+}
+
+.input.input-xs::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #c8c8c8;
+  text-align: center;
+}
+
+.input-error {
+  outline: none;
+  color: #7d7d7d;
+  font-size: 14px;
+  border: 2px solid #e08c72;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 6px #e08c72;
+          box-shadow: 0 0 6px #e08c72;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.input-error:hover {
+  border: 2px solid #e0613a;
+  -webkit-box-shadow: 0 0 6px #e08c72;
+          box-shadow: 0 0 6px #e08c72;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+/*-----------------------*/
+/* &Select Define
+-------------------------*/
+select {
+  height: 30px;
+  border: 1px solid #c8c8c8;
+  border-radius: 5px;
+  outline: none;
+  color: #7d7d7d;
+  font-size: 14px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+select:hover {
+  border: 1px solid #a0d7ff;
+  -webkit-box-shadow: 0 0 6px #a0d7ff;
+          box-shadow: 0 0 6px #a0d7ff;
+}
+
+.select-lg {
+  width: 350px;
+}
+
+.select-md {
+  width: 175px;
+}
+
+.select-sm {
+  width: 80px;
+}
+
+.select-xs {
+  width: 40px;
+}
+
+/*-----------------------*/
+/* &Search Define
+-------------------------*/
+.search-lg {
+  width: 350px;
+  height: 30px;
+  outline: none;
+  color: #7d7d7d;
+  font-size: 14px;
+  text-indent: 8px;
+  border: 1px solid #7d7d7d;
+  border-radius: 20px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.search-lg:hover {
+  border: 1px solid #7d7d7d;
+  -webkit-box-shadow: 0 0 6px #7d7d7d;
+          box-shadow: 0 0 6px #7d7d7d;
+}
+
+.search-lg::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #c8c8c8;
+}
+
+.search-md {
+  width: 175px;
+  height: 30px;
+  outline: none;
+  color: #7d7d7d;
+  font-size: 14px;
+  text-indent: 8px;
+  border: 1px solid #7d7d7d;
+  border-radius: 20px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.search-md:hover {
+  border: 1px solid #7d7d7d;
+  -webkit-box-shadow: 0 0 6px #7d7d7d;
+          box-shadow: 0 0 6px #7d7d7d;
+}
+
+.search-md::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #c8c8c8;
+}
+
+.fa.fa-search.fa-md.color--light-grey:hover {
+  color: #454545;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+/*-----------------------*/
+/* &Checkbox Define
+-------------------------*/
+.checkbox-yellow[type="checkbox"] {
+  -webkit-appearance: none;
+  /*清除复选框默认样式*/
+  background: #fff url(img/yellow.png);
+  /*复选框的背景图，就是上图*/
+  height: 18px;
+  /*高度*/
+  vertical-align: middle;
+  width: 18px;
+  outline: none;
+}
+
+.checkbox-yellow[type="checkbox"]:hover {
+  -webkit-box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+          box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+  -webkit-transition: 0.01s;
+  transition: 0.01s;
+}
+
+.checkbox-yellow[type="checkbox"]:checked {
+  background-position: -40px 0;
+}
+
+.checkbox-blue[type="checkbox"] {
+  -webkit-appearance: none;
+  /*清除复选框默认样式*/
+  background: #fff url(img/blue.png);
+  /*复选框的背景图，就是上图*/
+  height: 18px;
+  /*高度*/
+  vertical-align: middle;
+  width: 18px;
+  outline: none;
+}
+
+.checkbox-blue[type="checkbox"]:hover {
+  -webkit-box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+          box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+  -webkit-transition: 0.01s;
+  transition: 0.01s;
+}
+
+.checkbox-blue[type="checkbox"]:checked {
+  background-position: -40px 0;
+}
+
+.checkbox-red[type="checkbox"] {
+  -webkit-appearance: none;
+  /*清除复选框默认样式*/
+  background: #fff url(img/red.png);
+  /*复选框的背景图，就是上图*/
+  height: 18px;
+  /*高度*/
+  vertical-align: middle;
+  width: 18px;
+  outline: none;
+}
+
+.checkbox-red[type="checkbox"]:hover {
+  -webkit-box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+          box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+  -webkit-transition: 0.01s;
+  transition: 0.01s;
+}
+
+.checkbox-red[type="checkbox"]:checked {
+  background-position: -40px 0;
+}
+
+.checkbox-green[type="checkbox"] {
+  -webkit-appearance: none;
+  /*清除复选框默认样式*/
+  background: #fff url(img/green.png);
+  /*复选框的背景图，就是上图*/
+  height: 18px;
+  /*高度*/
+  vertical-align: middle;
+  width: 18px;
+  outline: none;
+}
+
+.checkbox-green[type="checkbox"]:hover {
+  -webkit-box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+          box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+  -webkit-transition: 0.01s;
+  transition: 0.01s;
+}
+
+.checkbox-green[type="checkbox"]:checked {
+  background-position: -40px 0;
+}
+
+.checkbox-grey[type="checkbox"] {
+  -webkit-appearance: none;
+  /*清除复选框默认样式*/
+  background: #fff url(img/grey.png);
+  /*复选框的背景图，就是上图*/
+  height: 18px;
+  /*高度*/
+  vertical-align: middle;
+  width: 18px;
+  outline: none;
+}
+
+.checkbox-grey[type="checkbox"]:hover {
+  -webkit-box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+          box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+  -webkit-transition: 0.01s;
+  transition: 0.01s;
+}
+
+.checkbox-grey[type="checkbox"]:checked {
+  background-position: -40px 0;
+}
+
+.checkbox-mono[type="checkbox"] {
+  -webkit-appearance: none;
+  /*清除复选框默认样式*/
+  background: #fff url(img/mono.png);
+  /*复选框的背景图，就是上图*/
+  height: 18px;
+  /*高度*/
+  vertical-align: middle;
+  width: 18px;
+  outline: none;
+}
+
+.checkbox-mono[type="checkbox"]:hover {
+  -webkit-box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+          box-shadow: 0 0 2px rgba(1, 1, 1, 0.2);
+  -webkit-transition: 0.01s;
+  transition: 0.01s;
+}
+
+.checkbox-mono[type="checkbox"]:checked {
+  background-position: -40px 0;
+}
+
+/*-----------------------*/
+/* &Checkbox Define
+-------------------------*/
+.alert {
+  width: 320px;
+  height: 45px;
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
+  text-indent: -200px;
+  display: inline-block;
+}
+
+.alert-success {
+  background-color: #75e074;
+  -webkit-box-shadow: 0 0 5px #75e074;
+          box-shadow: 0 0 5px #75e074;
+}
+
+.alert-success > i {
+  position: relative;
+  left: 290px;
+  color: #fff;
+}
+
+.alert-error {
+  background-color: #e0613a;
+  -webkit-box-shadow: 0 0 5px #e08c72;
+          box-shadow: 0 0 5px #e08c72;
+}
+
+.alert-error i {
+  position: relative;
+  left: 290px;
+  color: #fff;
+}
+
+.alert-info {
+  background-color: #61bcff;
+  -webkit-box-shadow: 0 0 5px #a0d7ff;
+          box-shadow: 0 0 5px #a0d7ff;
+}
+
+.alert-info i {
+  position: relative;
+  left: 290px;
+  color: #fff;
+}
+
+.alert-warning {
+  background-color: #ffbc40;
+  -webkit-box-shadow: 0 0 5px #ffd280;
+          box-shadow: 0 0 5px #ffd280;
+}
+
+.alert-warning i {
+  position: relative;
+  left: 290px;
+  color: #fff;
+}
+/*# sourceMappingURL=component.css.map */

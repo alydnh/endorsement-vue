@@ -1,0 +1,23 @@
+{
+    "name": "express",
+    "version": "0.0.1",
+    "description": "An Express service",
+    "author": "卢德松 <ludesong@ptit365.com>",
+    "private": true,
+    "scripts": {
+        "service": "node service.js"
+    },
+    "dependencies": {
+        "express": "",
+        "path": ""
+    },
+    "engines": {
+        "node": ">= 6.0.0",
+        "npm": ">= 3.0.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ]
+}

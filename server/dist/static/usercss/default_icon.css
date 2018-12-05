@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+/*³ß´ç*/
+.icon20{height: 20px;width: 20px;background-repeat: no-repeat;background-position: center;}
+.icon32{height: 32px;width: 32px;background-repeat: no-repeat;background-position: center;}
+.icon52{height: 52px;width: 52px;background-repeat: no-repeat;background-position: center;}
+.icon40{height: 40px;width: 40px;background-repeat: no-repeat;background-position: center;}
+.icon78{height: 78px;width: 78px;background-repeat: no-repeat;background-position: center;}
+
+/*20px*/
+.icon-warn20 { background-image: url(img/tipicon.png); }
+.icon-g20 { background-image: url(img/g_icon.png); }
+.icon-x20 { background-image: url(img/xicon.png); }
+
+/*52px*/
+.icon-user52 { background-image: url(img/usericon.png); background-repeat: no-repeat; background-clip: padding-box;}
+.icon-pw52 { background-image: url(img/PWicon.png); background-repeat: no-repeat; background-clip: padding-box;}
+
+/*32px*/
+.icon-build32 {background-image: url(img/building.png);background-size: cover;}
+.icon-x32 { background-image: url(img/iconX.png); }
+
+/*40px*/
+.icon-green40 {background-image: url(img/greenicon.png);}
+.icon-grey40 {background-image: url(img/greyicon.png);}
+
+/*78px*/
+.icon-ok78{background-image: url(img/ok_icon.png);background-size: cover;}
+
+.icon-zhenyilogo{background-image: url(img/zhenyilogo.png);background-repeat: no-repeat;background-position: center;}
+

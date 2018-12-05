@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+
+/*三段式布局*/
+.header {top: 2%;}
+.body {}
+.footer {bottom: 1%;}
+

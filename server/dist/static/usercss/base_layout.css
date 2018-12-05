@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+body {
+	padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+
+/*水平布局*/
+.h-left30
+{
+	position: absolute;
+	width: 30%;
+	left: 0%;
+}
+
+.h-center50
+{
+	position: absolute;
+	width: 50%;
+	left: 25%;
+}
+.h-center80
+{
+	position: absolute;
+	width: 80%;
+	left: 10%;
+}
+
+.h-right70
+{
+	position: absolute;
+	width: 70%;
+	right: 0%;
+}
+
+/*垂直布局*/
+.v-top20
+{
+	position: absolute;
+	height: 20%;
+	top: 0%;
+}
+
+.v-middle70
+{
+	position: absolute;
+	height: 70%;
+	top: 15%;
+}
+
+.v-bottom10
+{
+	position: absolute;
+	height: 10%;
+	bottom: 0%;
+}
+
+/*定位（10方）*/
+.p-vc{position: absolute; top: 50%; transform: translate(0%, -50%);}
+.p-hm{position: absolute; left: 50%; transform: translate(-50%, 0%);}
+.p-c{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+.p-l{position: absolute;left: 0%; top: 50%; transform: translate(0%, -50%);}
+.p-l1{position: absolute;left: 1%; top: 50%; transform: translate(0%, -50%);}
+.p-r{position: absolute;right: 0%;top: 50%; transform: translate(0%, -50%);}
+.p-r1{position: absolute;right: 1%;top: 50%; transform: translate(0%, -50%);}
+.p-t{position: absolute;top: 0%;left: 50%; transform: translate(-50%, 0%);}
+.p-t1{position: absolute;top: 1%;left: 50%; transform: translate(-50%, 0%);}
+.p-b{position: absolute;bottom: 0%;left: 50%; transform: translate(-50%, 0%);}
+.p-b1{position: absolute;bottom: 1%;left: 50%; transform: translate(-50%, 0%);}
+.p-lt{position: absolute;left: 0%;top: 0%;}
+.p-lt1{position: absolute;left: 1%;top: 1%;}
+.p-lt{position: absolute;left: 0%;top: 0%;}
+.p-lt1{position: absolute;left: 1%;top: 1%;}
+.p-lb{position: absolute;left: 0%;bottom: 0%;}
+.p-lb1{position: absolute;left: 1%;bottom: 1%;}
+.p-rt{position: absolute;right: 0%;top: 0%;}
+.p-rt1{position: absolute;right: 1%;top: 1%;}
+.p-rb{position: absolute;right: 0%;bottom: 0%;}
+.p-rb1{position: absolute;right: 1%;bottom: 1%;}
+
+/*流*/
+.fl{float:left;}
+.fr{float:right;}
+
+/*尺寸*/
+.h100{height: 100%;}
+.h50{height: 50%;}
+.h30{height: 30%;}
+.h10{height: 10%;}
+.h5{height: 5%;}
+.w100{width: 100%;}
+.w50{width: 50%;}
+.w30{width: 30%;}
+.ml5{margin-left:5px;}
+
+/*背景图对齐位置*/
+.bgp-center{background-position: 50% 50%;}
+
+.bgp-l{background-position: 0% 50%;}
+
+.bgp-r
+{
+	background-position: 100% 50%;
+}
+
+.bgp-t
+{
+	background-position: 50% 0%;
+}
+
+.bgp-b
+{
+	background-position: 50% 100%;
+}
+
+.bgp-lt
+{
+	background-position: 0% 0%;
+}
+
+.bgp-lb
+{
+	background-position: 0% 100%;
+}
+
+.bgp-rt
+{
+	background-position: 100% 0%;
+}
+
+.bgp-rb
+{
+	background-position: 100% 100%;
+}
+

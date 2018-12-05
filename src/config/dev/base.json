@@ -1,0 +1,5 @@
+{
+    "cars": "https://cars-wms-api-test.ptit365.com",
+    "resource": "https://resource-api-test.ptit365.com",
+    "parking": "https://parking-api-test.ptit365.com"
+}
