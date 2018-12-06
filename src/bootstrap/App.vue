@@ -125,6 +125,10 @@ body,
 
 /*icon*/
 
+.fa.transparent {
+    color: transparent;
+}
+
 .fa.danger {
     color: #f56c6c;
 }

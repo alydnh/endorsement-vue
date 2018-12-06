@@ -1,9 +1,11 @@
 <template>
     <pt-layout fixed-block-basis="38%">
         <div class="flex-col main" slot="first">
-
             <div class="flex-col bg-default round-corner space-between-content login-area">
                 <div class="flex-item" />
+                <div class="flex-item center-content">
+                    <pt-text text="login/text/title" />
+                </div>
                 <el-input v-model="accountName" :disabled="disabled" :placeholder="_tt('login/placeholder/account-email-phone')">
                     <template slot="prepend">
                         <i class="fa fa-user" />
@@ -18,16 +20,24 @@
                     <el-button class="end-self" type="text">{{_tt('login/button/forget-password')}}</el-button>
                 </div>
                 <div class="flex-item tips center-content">
-                    <i v-if="showErrorMessage" class="fa fa-times-circle danger">&nbsp;{{errorMessage}}</i>
-                    <span v-if="loading"><i class="el-icon-loading"></i>登录中...</span>
-                    <span v-if="showTips">请输入账户名和密码进行登录</span>
+                    <pt-text v-if="showErrorMessage" prefix-icon="fa fa-times-circle" :text="errorMessage" />
+                    <pt-text v-if="loading" prefix-icon="el-icon-loading" text="login/text/loagining" />
+                    <pt-text v-if="showTips" prefix-icon="fa fa-info-circle" text="login/text/tips" />
                 </div>
                 <el-button @click="onLogin" :loading="loading" type="warning">{{_tt('login/button/login')}}</el-button>
                 <div class="flex-item" />
             </div>
         </div>
         <div class="flex-col main" slot="second">
-
+            <div class="flex-col round-corner image-area">
+                <pt-layout fixed-block="second" vertical-mode fixed-block-basis="20%">
+                    <div class="flex-row" slot="second">
+                        <div class="flex-item gutter-10" />
+                        <el-button type="warning" plain @click="onRegister">{{_tt('login/button/register')}}</el-button>
+                        <pt-text text="login/text/register-tips" />
+                    </div>
+                </pt-layout>
+            </div>
         </div>
     </pt-layout>
 </template>
@@ -48,21 +58,20 @@ export default {
         onLogin() {
             this.errorMessage = '';
             if (_.isEmpty(this.accountName)) {
-                this.errorMessage = this._tt(
-                    'login/validate/account-name-empty',
-                );
+                this.errorMessage = 'login/validate/account-name-empty';
                 return false;
             }
 
             if (_.isEmpty(this.password)) {
-                this.errorMessage = this._tt(
-                    'login/validate/account-password-empty',
-                );
+                this.errorMessage = 'login/validate/account-password-empty';
                 return false;
             }
 
             this.loading = true;
             return true;
+        },
+        onRegister() {
+            this.$router.replace('/account/register');
         },
     },
     computed: {
@@ -78,21 +87,3 @@ export default {
     },
 };
 </script>
-
-<style lang="scss">
-.login-area {
-    flex-basis: 90%;
-    margin-right: 10px;
-    padding: 0px 40px;
-    .el-input-group__prepend > i.fa {
-        width: 20px;
-        text-align: center;
-    }
-    .tips {
-        background-image: url(/static/images/module-account/tips.png);
-        background-repeat: no-repeat;
-        background-position-x: center;
-        padding-top: 20px;
-    }
-}
-</style>

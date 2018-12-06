@@ -52,4 +52,40 @@ export default {};
 .bg-default {
     background-color: white;
 }
+
+.register-area,
+.login-area {
+    flex-basis: 90%;
+    padding: 0px 40px;
+}
+.register-area {
+    margin-left: 10px;
+}
+.login-area {
+    margin-right: 10px;
+    .el-input-group__prepend > i.fa {
+        width: 20px;
+        text-align: center;
+    }
+    .tips {
+        background-image: url(/static/images/module-account/tips.png);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        padding-top: 20px;
+    }
+}
+
+.image-area {
+    flex-basis: 90%;
+    background-image: url(/static/images/module-account/login-background.png);
+    background-size: cover;
+
+    .gutter-10 {
+        flex-basis: 10%;
+    }
+
+    .el-button + .pt-text {
+        margin-left: 10px;
+    }
+}
 </style>
