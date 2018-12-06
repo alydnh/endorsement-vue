@@ -123,6 +123,11 @@ body,
     }
 }
 
+/*cursor*/
+.cursor-pointer {
+    cursor: pointer;
+}
+
 /*icon*/
 
 .fa.transparent {

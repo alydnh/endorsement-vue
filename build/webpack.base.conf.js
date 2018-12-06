@@ -1,4 +1,4 @@
-'use strict';
+
 const path = require('path');
 const utils = require('./utils');
 const config = require('../config');
@@ -34,7 +34,7 @@ module.exports = {
         alias: {
             vue$: 'vue/dist/vue.esm.js',
             '@': resolve('src'),
-            'element-ui': path.resolve(__dirname, '../src/module-element-ui/')
+            'element-ui': path.resolve(__dirname, '../src/module-element-ui/'),
         },
     },
     module: {
@@ -49,6 +49,7 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')],
+                exclude: [resolve('src/module-element-ui/src/utils/popper.js')],
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
