@@ -21,7 +21,8 @@ Vue.mixin({
             return _.isEmpty(text) ? '' : _.reduce(toTranslate, (l, r) => l.replace(r, this._tt(r)), text);
         },
         _tt(text) {
-            return text;
+            const texts = text.split('/');
+            return _.isEmpty(texts) ? text : _.last(texts);
         },
     },
 });
