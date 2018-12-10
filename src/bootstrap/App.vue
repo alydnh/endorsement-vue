@@ -7,6 +7,11 @@
 <script>
 export default {
     name: 'App',
+    data() {
+        return {
+            ready: false,
+        };
+    },
 };
 </script>
 

@@ -13,6 +13,9 @@ class ApiHost {
     }
 
     call(path, method, urlParams, bodyParams, options) {
+        if (path[0] !== '/') {
+            path = `/${path}`;
+        }
         let configs = {
             url: `${this.baseUrl}/${this.name}${path}`,
             params: urlParams,
@@ -29,22 +32,16 @@ class ApiHost {
         return this.axiosInstance
             .request(configs)
             .then(res => {
-                if (
-                    !_.isEmpty(res.config) &&
-                    res.config.responseType === 'blob'
-                ) {
-                    this._downloadFile(
-                        res.data,
-                        res.config.fileName,
-                        res.headers['content-type'],
-                    );
+                if (!_.isEmpty(res.config) && res.config.responseType === 'blob') {
+                    this.downloadFile(res.data, res.config.fileName, res.headers['content-type']);
                     return {};
                 }
 
                 return res.data;
             })
             .catch(error => {
-                const message = _.defaultTo(error.response.data, error.message);
+                const response = _.defaultTo(error.response, {});
+                const message = _.defaultTo(response, error.message);
                 throw new Error(message);
             });
     }
@@ -68,15 +65,11 @@ class ApiHost {
         return this.call(path, 'patch', null, bodyParams, options);
     }
 
-    _downloadFile(data, fileName, mime) {
+    downloadFile(data, fileName, mime) {
         const blob = new Blob([data], {
             type: mime || 'application/octet-stream',
         });
         if (typeof window.navigator.msSaveBlob !== 'undefined') {
-            // IE workaround for "HTML7007: One or more blob URLs were
-            // revoked by closing the blob for which they were created.
-            // These URLs will no longer resolve as the data backing
-            // the URL has been freed."
             window.navigator.msSaveBlob(blob, fileName);
         } else {
             const blobURL = window.URL.createObjectURL(blob);
@@ -85,10 +78,6 @@ class ApiHost {
             tempLink.href = blobURL;
             tempLink.setAttribute('download', fileName);
 
-            // Safari thinks _blank anchor are pop ups. We only want to set _blank
-            // target if the browser does not support the HTML5 download attribute.
-            // This allows you to download files in desktop safari if pop up blocking
-            // is enabled.
             if (typeof tempLink.download === 'undefined') {
                 tempLink.setAttribute('target', '_blank');
             }
